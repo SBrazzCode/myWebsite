@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shaun Brazzoni</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="ShaunBrazzoni.js" ></script>
+        <link rel="icon" type="image/png" href="favicon.png"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/css/uikit.min.css" />
+        <link href="ShaunBrazzoni.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/97e2ee3dbf.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <img id="Logo" src="images/Logo.png">
+        <div id="Menu">
+            <div class="HamburgerIcon" onclick="menuClicked(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+
+            <div id='MenuContent'>
+                <div class="menuSection" onClick="window.open('#Section2', '_self');">
+                    <div class='MenuLinkWrapper'>
+                        <a href="#Section2">Intro</a>
+                    </div>
+                </div>
+                <div class="menuSection" onClick="window.open('#Section3', '_self');">
+                    <div class='MenuLinkWrapper'>
+                        <a href="#Section3">Projects</a>
+                    </div>
+                </div>
+                <div class="menuSection" onClick="window.open('#Section4', '_self');">
+                    <div class='MenuLinkWrapper'>
+                        <a href="#Section4">Experience</a>
+                    </div>
+                </div>
+                <div class="menuSection" onClick="window.open('#Section5', '_self');">
+                    <div class='MenuLinkWrapper'>
+                        <a href="#Section5">Books</a>
+                    </div>
+                </div>
+                <div class="menuSection" onClick="window.open('#Section6', '_self');">
+                    <div class='MenuLinkWrapper'>
+                        <a href="#Section6">Contact</a>
+                    </div>
+                </div>
+                <!--                <div class="uk-animation-toggle menuSection" uk-tooltip="title: In Construction">
+                                    <div class='uk-animation-shake MenuLinkWrapper' onClick='shake(this);'>
+                                        <a href="https://crippledtable.github.io/theClock/" target="_blank">TinkerBox</a>
+                                    </div>
+                                </div>
+                                <div class="uk-animation-toggle menuSection" uk-tooltip="title: In Construction">
+                                    <div class='uk-animation-shake MenuLinkWrapper' onClick='shake(this);'>
+                                        <a href="#Section5">Photo Gallery</a>
+                                    </div>
+                                </div>-->
+            </div>
+        </div>
+
+        <div id="Content-Wrapper">
+
+            <div id="Section1" class="Section">
+
+                <div id="NameBox">
+                    <h1 id="MainName"><span>S</span>HAUN<br><span>B</span>RAZZONI</h1>
+                </div>
+
+                <div id="Main">
+
+                </div>
+
+            </div>
+
+            <div id="Section2" class="Section">
+
+                <div id="Intro">
+
+                    <div data-aos="fade-left" data-aos-once="true"><h2>Intro</h2></div>
+
+                    <div data-aos="fade-right" data-aos-once="true">
+                        <div id="HeadShotCrop">
+                            <img id="HeadShot" src="images/SubjectiveFront.jpg">
+                        </div>
+                    </div>
+
+                    <div data-aos="zoom-out" data-aos-once="true"><h3>I am</h3></div>
+
+                    <div class="MyTitles">
+                        <div data-aos="zoom-in" data-aos-once="true"><h4>An Aspiring <span>Web Developer</span></h4></div>
+                        <br>
+                        <div data-aos="zoom-in" data-aos-once="true"><h4>An Ethical-Hacking <span>Hobbyist</span></h4></div>
+                        <br>
+                        <div data-aos="zoom-in" data-aos-once="true"><h4>A Curious <span>Student</span></h4></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id='Section3' class="Section">
+                <h2>Projects</h2>
+                <div class="QuoteContainer" data-aos="flip-up" data-aos-once="true">
+                    <div class='QuoteWrapper'>
+                        <q>"Be completely engaged with what you are doing in the here and now. And instead of calling it work, realize it is play."</q>
+                    </div>
+
+                    <br> - Alan Watts
+
+                </div>
+                <div id="ProjectContainer">
+                    <div class="ProjectWrapper">
+                        <a href="https://sbrazzcode.github.io/theClock/" target="_blank">
+                            <div class="uk-card uk-card-default uk-card-hover">
+                                <div class="uk-card-media-top">
+                                    <figure>
+                                        <img src="images/theClock.jpg" alt="">
+                                    </figure>
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title HoverSelector">The Clock</h3>
+                                    <p>An app built to practise developing and deploying in <span>React</span> using <span>GatsbyJS</span>.
+                                        To communicate how a grandfather clock works, the app animates a contrived grandfather clock.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Section4" class="Section">
+
+                <div id="Experience">
+                    <h2>Experience</h2>
+                    <div class="QuoteContainer" data-aos="flip-up" data-aos-once="true">
+                        <div class='QuoteWrapper'>
+                            <q>"It's better to have a short life that is full of what you like doing, than
+                                a long life spent in a miserable way."</q>
+                        </div>
+
+                        <br> - Alan Watts
+
+                    </div>
+
+                    <div class="ExperienceItem">
+                        <div class="ExperienceImage" data-aos='fade-right' data-aos-once="true" data-aos-anchor-placement="bottom-bottom">
+
+                            <h6>Sep 2019 to April 2021</h6>
+                            <i class="fas fa-university fa-3x"></i>
+
+                        </div>
+                        <div class="Description">
+                            <h4>Southern Alberta Institute of Technology (SAIT)</h4>
+                            <h5>Software Development Diploma</h5>
+                            <p>I am learning how to build <span>websites</span>, 
+                                <span>applications</span> and <span>databases</span>. We <span>collaborate</span>
+                                with our peers, and apply our skills to tackle realistic-problems.
+                                So far, our tech stack has been Java, SQL Plus, JavaScript, CSS, HTML, AdobeXd & Linux/Windows.</p>
+                        </div>
+                    </div>
+
+                    <div class="ExperienceItem">
+                        <div class="ExperienceImage" data-aos='fade-right' data-aos-once="true" data-aos-anchor-placement="bottom-bottom">
+                            <h6>Jun 2017 to Sep 2017</h6>
+                            <i class="far fa-building fa-3x" style="margin-top: 2vh;"></i>
+                        </div>
+                        <div class="Description">
+                            <h4>Statcom Ltd.</h4>
+                            <h5>Junior Seismic Programmer</h5>
+                            <p>Statcom gave me the chance to apply my programming knowledge in the
+                                real-world. Using the <span>Qt Creator</span>, I built a rudimentary version of a <span>desktop application</span>.
+                                The application read data from a seismic trace, converted IBM Single Precision Floating 
+                                Point data to a <span>C++</span> data type, and plotted the data on a GUI.</p>
+                        </div>
+                    </div>
+
+                    <div class="ExperienceItem">
+                        <div class="ExperienceImage" data-aos='fade-right' data-aos-once="true" data-aos-anchor-placement="bottom-bottom">
+                            <h6>Sep 2015 to April 2018</h6>
+                            <i class="fas fa-university fa-3x"></i>
+                        </div>
+                        <div class="Description">
+                            <h4>The University of British Columbia (UBC)</h4>
+                            <h5>Engineering/General Studies</h5>
+                            <p>I will be forever grateful for the experiences I had at UBC; UBC
+                                introduced me to <span>coding</span>, <span>psychology</span> and <span>philosophy</span>. 
+                                It was also home to many friendly, 
+                                creative and passionate individuals. At UBC, I discovered what it was like
+                                to learn out of interest, not out of necessity.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="Section5" class="Section">
+
+                <div id="Books">
+                    <h2>Books</h2>
+
+                    <div class="QuoteContainer" data-aos="flip-up" data-aos-once="true">
+                        <!--                        Could add a click to this https://www.youtube.com/watch?v=khOaAHK7efc-->
+                        <div class='QuoteWrapper'>
+                            <q>"That which gives us the power to work magic sets the limit of that power. 
+                                A mage can control only what... he can name exactly and wholly."</q>
+                        </div>
+
+                        <br> - Ursula K. Le Guin in <span>A Wizard of EarthSea</span>
+
+                    </div>
+
+                    <div uk-slider id='BookSlider'>
+
+                        <div class="uk-position-relative">
+
+                            <div class="uk-slider-container uk-light">
+                                <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
+                                    <li class="uk-button" href="#modal-group-1" uk-toggle data-aos="zoom-in" data-aos-once="true">
+                                        <div class="BookImageContainer">
+                                            <img class="BookImage" src="images/HomoDeus.jpg" alt=""> <!-- https://images-na.ssl-images-amazon.com/images/I/71FX96Ae-PL.jpg !-->
+                                            <div class="fas fa-plus-circle fa-3x PlusSign PlusSignTouch uk-hidden-notouch"><div></div></div>
+                                            <div class="fas fa-plus-circle fa-3x PlusSign uk-hidden-touch"><div></div></div>
+                                        </div>
+              
+                                        <div class="uk-position-center uk-panel">
+                                            <!--<div class="fas fa-plus-circle fa-3x PlusSign"><div></div></div>-->
+                                        </div>
+                                    </li>
+                                    <li class="uk-button" href="#modal-group-2" uk-toggle data-aos="zoom-in" data-aos-once="true">
+                                        <div class="BookImageContainer">
+                                            <img class="BookImage" src="images/ThePowerOfHabit.jpg" alt=""> <!-- https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1545854312l/12609433._SY475_.jpg !-->
+                                            <div class="fas fa-plus-circle fa-3x PlusSign PlusSignTouch uk-hidden-notouch"><div></div></div>
+                                            <div class="fas fa-plus-circle fa-3x PlusSign uk-hidden-touch"><div></div></div>
+                                        </div>
+                                        <div class="uk-position-center uk-panel">
+                                        </div>
+                                    </li>
+                                    <li class="uk-button" href="#modal-group-3" uk-toggle data-aos="zoom-in" data-aos-once="true">
+                                        <div class="BookImageContainer">
+                                            <img class="BookImage uk-dark" src="images/Wizard.jpg" alt="">
+                                            <div class="fas fa-plus-circle fa-3x PlusSign PlusSignTouch uk-hidden-notouch"><div></div></div>
+                                            <div class="fas fa-plus-circle fa-3x PlusSign uk-hidden-touch"><div></div></div>
+                                        </div>
+                                        <div class="uk-position-center uk-panel">
+                                        </div>
+                                    </li>
+                                    <li class="uk-button" href="#modal-group-4" uk-toggle data-aos="zoom-in" data-aos-once="true">
+                                        <div class="BookImageContainer">
+                                            <img class="BookImage" src="images/TheFountainHead.jpg" alt="">
+                                            <div class="fas fa-plus-circle fa-3x PlusSign PlusSignTouch uk-hidden-notouch"><div></div></div>
+                                            <div class="fas fa-plus-circle fa-3x PlusSign uk-hidden-touch"><div></div></div>
+                                        </div>
+                                        <div class="uk-position-center uk-panel">
+                                        </div>
+                                    </li>
+                                    <li class="uk-button" href="#modal-group-5" uk-toggle data-aos="zoom-in" data-aos-once="true">
+                                        <div class="BookImageContainer">
+                                            <img class="BookImage" src="images/Psychology.jpg" alt="">
+                                            <div class="fas fa-plus-circle fa-3x PlusSign PlusSignTouch uk-hidden-notouch"><div></div></div>
+                                            <div class="fas fa-plus-circle fa-3x PlusSign uk-hidden-touch"><div></div></div>
+                                        </div>
+                                        <div class="uk-position-center uk-panel">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="uk-hidden@s uk-light">
+                                <a class="uk-position-center-left uk-position-small " href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                                <a class="uk-position-center-right uk-position-small " href="#" uk-slidenav-next uk-slider-item="next"></a>
+                            </div>
+
+                            <div class="uk-visible@s">
+                                <a class="uk-position-center-left-out uk-position-small " href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                                <a class="uk-position-center-right-out uk-position-small " href="#" uk-slidenav-next uk-slider-item="next"></a>
+                            </div>
+
+                        </div>
+
+                        <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+                    </div>
+
+
+
+                </div>
+
+                <!-- might want to ajax these !-->
+                <div id="modal-group-1" uk-modal>
+                    <div class="uk-modal-dialog">
+                        <button class="uk-modal-close-default" type="button" uk-close></button>
+                        <div class="uk-modal-header">
+                            <h2 class="uk-modal-title">Homo Deus <span>by Yuval Noah Harari</span></h2>
+                        </div>
+                        <div class="uk-modal-body" uk-overflow-auto>
+
+                            <div class="BookItem">
+
+                                <div>
+                                    <img class="ModalBookImage" src="images/HomoDeus.jpg" alt="">
+                                </div>
+                                <div class="Description">
+                                    <p>This books, the sequel to "Sapiens", is like my road map
+                                        to the <span>future</span>. Harari summarizes his view of how the world
+                                        currently operates; our communities are held together by fictional constructs.
+                                        Then, on the topic of <span>AI</span>, he discusses the ostensible differences between consciousness and intelligence.</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="uk-modal-footer uk-text-right">
+                            <a href="#modal-group-5" class="uk-button uk-button " uk-toggle>Previous</a>
+                            <a href="#modal-group-2" class="uk-button uk-button-primary " uk-toggle>Next</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="modal-group-2" uk-modal>
+                    <div class="uk-modal-dialog">
+                        <button class="uk-modal-close-default" type="button" uk-close></button>
+                        <div class="uk-modal-header">
+                            <h2 class="uk-modal-title">The Power of Habit <span>by Charles Duhigg</h2>
+                        </div>
+                        <div class="uk-modal-body" uk-overflow-auto>
+
+                            <div class="BookItem">
+
+                                <div>
+                                    <img class="ModalBookImage" src="images/ThePowerOfHabit.jpg" alt="">
+                                </div>
+                                <div class="Description">
+                                    <p>Feeling hungry after looking at the cover of this book?
+                                        The <span style='color: #ffbc0d;'>red</span> and <span style='color: #ba0020'>yellow</span> colors are used ubiquitously by fast food corporations. 
+                                        These colors act as cues, and they are the first step in a <span>habit loop</span>. The
+                                        colors are just one example, and they are just one idea that Duhigg discusses in this book. 
+                                        I've used concepts from this book to reinforce workout routines and develop interfaces that
+                                        retain customers.</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="uk-modal-footer uk-text-right">
+                            <a href="#modal-group-1" class="uk-button uk-button " uk-toggle>Previous</a>
+                            <a href="#modal-group-3" class="uk-button uk-button-primary " uk-toggle>Next</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="modal-group-3" uk-modal>
+                    <div class="uk-modal-dialog">
+                        <button class="uk-modal-close-default" type="button" uk-close></button>
+                        <div class="uk-modal-header">
+                            <h2 class="uk-modal-title">A Wizard of Earthsea <span>by Ursula K. Le Guin</span></h2>
+                        </div>
+                        <div class="uk-modal-body" uk-overflow-auto>
+                            <div class="BookItem">
+
+                                <div>
+                                    <img class="ModalBookImage" src="images/Wizard.jpg" alt="">
+                                </div>
+                                <div class="Description">
+                                    <p>Ursula K. Le Guin is a great writer, and she crafts wonderful <span>metaphors</span>.
+                                        My favourite metaphor in this book is naming. A wizards ability to speak the name of
+                                        something, exactly and wholly, gives him control over that thing. This truth is parallel to our ability to
+                                        understand something in the real world. <span>Naming is our understanding</span>; if we can <span>understand
+                                            everything</span> there is to know about something, we can manipulate it to our will. This idea inspires
+                                        the <span>polymath</span> in me.</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="uk-modal-footer uk-text-right">
+                            <a href="#modal-group-2" class="uk-button uk-button " uk-toggle>Previous</a>
+                            <a href="#modal-group-4" class="uk-button uk-button-primary " uk-toggle>Next</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="modal-group-4" uk-modal>
+                    <div class="uk-modal-dialog">
+                        <button class="uk-modal-close-default" type="button" uk-close></button>
+                        <div class="uk-modal-header">
+                            <h2 class="uk-modal-title">The Fountainhead <span>by Ayn Rand</span></h2>
+                        </div>
+                        <div class="uk-modal-body" uk-overflow-auto>
+
+                            <div class="BookItem">
+
+                                <div>
+                                    <img class="ModalBookImage" src="images/TheFountainHead.jpg" alt="">
+                                </div>
+                                <div class="Description">
+                                    <p>This is a contentious novel. It has some ideas that can be reworked into modern
+                                        philosophies; however, there are some that are best left in the 1930s. Ideas like
+                                        <span>function before form</span> can still be valuable to environmentalists, frugalists, 
+                                        and web developers. In a consumerist society, I think it is important for us
+                                        to value function over superficiality.</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="uk-modal-footer uk-text-right">
+                            <a href="#modal-group-3" class="uk-button uk-button " uk-toggle>Previous</a>
+                            <a href="#modal-group-5" class="uk-button uk-button-primary " uk-toggle>Next</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="modal-group-5" uk-modal>
+                    <div class="uk-modal-dialog">
+                        <button class="uk-modal-close-default" type="button" uk-close></button>
+                        <div class="uk-modal-header">
+                            <h2 class="uk-modal-title">Psychology <span>by Lilienfeld et al.</h2>
+                        </div>
+                        <div class="uk-modal-body" uk-overflow-auto>
+
+                            <div class="BookItem">
+
+                                <div>
+                                    <img class="ModalBookImage" src="images/Psychology.jpg" alt="">
+                                </div>
+                                <div class="Description">
+                                    <p>The 3rd Canadian Edition was the <span>textbook</span> for my first psychology class. 
+                                        This was one of the few textbooks that I did not resell, for it is still valuable to me.
+                                        The concepts in this textbook help me understand the reasoning behind <span>UX principles</span>.
+                                        The book has research-backed theories that I apply when developing websites.</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="uk-modal-footer uk-text-right">
+                            <a href="#modal-group-4" class="uk-button uk-button " uk-toggle>Previous</a>
+                            <a href="#modal-group-1" class="uk-button uk-button-primary " uk-toggle>Next</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id='Section6' class="Section">
+                <h2>Contact</h2>
+                <div>
+                    <div>
+                        <i class="fab fa-linkedin fa-4x" onclick='window.open("https://www.linkedin.com/in/shaunbrazzoni-sds/");'></i>
+                    </div>
+                    <div>
+                        <i class="fas fa-envelope fa-4x" onclick="mailhidepopup = window.open('https://mailhide.io/e/7pSM7', 'mailhidepopup', 'width=580,height=635'); return false;"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <i class="fas fa-arrow-down fa-4x" id="NavSuggestion"></i>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+                            AOS.init({duration: 600});
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit-icons.min.js"></script>
+    </body>
+</html>

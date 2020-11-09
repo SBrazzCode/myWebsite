@@ -1,0 +1,945 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 5, 2020, 6:27:18 PM
+    Author     : 832059
+*/
+
+
+/* Begin CSS Reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* End CSS Reset */
+
+/* Begin Global Styles */
+
+html{
+    scroll-behavior: smooth;
+}
+
+span{
+    color: #75BAA6;
+}
+
+h1{
+    font-size: 96px;
+    font-weight: 700;
+    text-shadow:
+        -1px -1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff,
+        1px 1px 0 #fff;  
+}
+
+h2 {
+
+    font-size: 60px;
+}
+
+h3 {
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+    font-size: 48px;
+}
+
+h4 {
+    margin-top: 3vh;
+    font-size: 34px;
+}
+
+h5 {
+    margin-top: 2vh;
+    font-size: 24px;
+}
+
+h6{
+    margin-top: 0.5vh;
+    font-size: 20px;
+}
+
+p{
+    margin-top: 2vh;
+    font-size: 16px;
+    text-align: left;
+}
+
+q{
+    font-size: 20px; 
+}
+
+
+div.QuoteWrapper{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4vh;
+}
+
+div.QuoteContainer > span{
+    color: #666;
+    font-style: italic;
+}
+
+div.QuoteContainer{
+    text-align: right;
+    display: inline-block;
+    margin-bottom: 10vh;
+}
+
+#Content-Wrapper{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Description{
+    margin-left: 5vw;
+}
+
+/* End Global Styles */
+
+body{
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+#Menu{
+    position: fixed;
+    right: -12%;
+    top: 8%;
+    width: 20%;
+
+    -webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+    -ms-transition: 0.1s;
+    -o-transition: 0.1s;
+    transition: 0.1s;
+
+    z-index: 3;
+
+}
+
+.MenuDisplayed{
+
+    right: -4% !important;
+}
+
+.MenuHidden{
+
+    right: -12% !important;
+}
+
+.HamburgerIcon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    padding: 5px;
+    z-index: 1;
+    left: 2px;
+    top: 1px;
+}
+
+.HamburgerIcon:hover > div {
+    background-color: #75BAA6;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
+.bar2{
+    background-color: #333 !important;
+}
+
+.bar1:hover, .bar2:hover, .bar3:hover {
+
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+    background-color: #333 !important;
+}
+
+#MenuContent{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    height: 100%;
+    left: 40%;  /*position to be translated after menu icon is clicked */
+    bottom: 53px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    justify-content: center;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(100, 100, 100, 0.4);
+
+
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+
+    z-index: 0;
+}
+
+.MenuContentDisplayed{
+
+    left: 0% !important;
+}
+
+.MenuContentHidden{
+
+    left: 40% !important;
+}
+
+.menuSection{
+    margin-bottom: 4vh;
+    margin-top: 4vh;
+    width: 90%;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    /* The border needs to exist before the hover or the elements will slightly shift as a new
+     1px border is added. */
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(100, 100, 100, 0.0);
+
+}
+
+div.menuSection:hover{
+    background: rgba(255, 255, 255, 0.0);
+    backdrop-filter: blur(8px);
+
+    border-color: rgba(100, 100, 100, 0.4);
+}
+
+.menuSection > div > a{
+    text-decoration: none;
+    color: #406E60;
+    font-size:24px;
+}
+
+.MenuLinkWrapper{
+    height: 100%;
+}
+#Logo{ 
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    z-index: 5;
+    max-height: 75px;
+}
+
+
+
+.Section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+/* Begin Section 1 Styles */
+
+#Section1{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#Main{
+
+    background-color: rgba(0,0,0,0.5);
+    background-image: url('images/ObjectiveMountain.JPG');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgba(255,255,255,0.1);
+    background-blend-mode: lighten;
+    background-position: 50%;
+    filter: grayscale(100%);
+
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    z-index: -1;
+}
+
+
+#NameBox{
+
+    position: absolute;
+    left: 50%;
+    top: -10%;
+    transform: translateX(-50%);
+    display: inline-block;
+
+    border-top-style: solid;
+    border-color: #75BAA6;
+    border-width: 4px;
+    color: black;
+    z-index: 1;
+
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+
+    animation-name: DirectMotionDown;
+    animation-duration: 1s;
+}
+
+.MoveNameBox{
+    top: 7% !important;
+}
+
+.triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 40px solid #BA7F8D;
+
+}
+
+/* End Section 1 Styles */
+
+/* Begin Section 2 Styles */
+
+#Section2{
+    width: 100vw;
+    max-width: 100%;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    background-color: white;
+}
+
+#HeadShot{
+
+}
+
+#HeadShotCrop{
+    overflow: hidden;
+
+    height: 25vw;
+    width: 25vw;
+    max-width: 300px;
+    max-height: 300px;
+    min-width: 150px;
+    min-height: 150px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+}
+
+/* End Section 2 Styles */
+
+/* Begin Section 3 Styles */
+
+#Section3{
+    text-align: center;
+    position: relative;
+    background-color: #ccc;
+    text-align: center;
+    z-index: 1;
+}
+
+#ProjectContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /*    margin-top: 10vh;*/
+}
+
+.uk-card{
+    max-width: 300px;
+}
+
+.ProjectWrapper > a {
+    text-decoration: none;
+}
+
+.ProjectWrapper > a:hover .HoverSelector{
+    text-decoration: underline;
+}
+
+.uk-card-body > p{
+    text-decoration: none !important;
+}
+
+/*.ProjectWrapper:not(:first-child) {
+     margin-top: 3vh;
+}*/
+
+.ProjectWrapper {
+    margin-top: 3vh;
+}
+
+.uk-card-body{
+    background-color: #eee;
+}
+
+.uk-card-body > h3 {
+    margin-top: 0vh;
+    margin-bottom: 0vh;
+}
+
+.uk-card-media-top > figure{
+    position: relative;
+    width: 300px;
+    height: 220px;
+    overflow: hidden;
+    /*    max-width: 200px;*/
+}
+
+.uk-card-media-top > figure > img{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    max-width: 350px;
+}
+/* End Section 3 Styles */
+
+/* Begin Section 4 Styles */
+
+#Section4{
+    background-color: rgb(220, 220, 220);
+    text-align: center;
+
+    z-index: 1;
+    position: relative;
+}
+
+.QuoteWrapper {
+    text-align: center;
+    width: 50vw;
+}
+
+
+#Experience > div.ExperienceItem{
+
+    margin-top: 6vh;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    justify-content: space-around;
+
+    text-align: left;
+
+    font-size: 10vh;
+    width: 50vw;
+}
+
+#Experience > div > div > h4{
+    margin-top: 0;
+}
+
+.ExperienceImage{
+    text-align: center;
+    min-width: 30vh;
+}
+
+.fas{
+    color: #406E60;
+
+}
+
+.far{
+    color: #406E60;
+}
+/* End Section 4 Styles */
+
+
+/* Start Section 5 Styles */
+#Section5{
+    background-color: rgb(200, 200, 200);
+    text-align: center;
+
+    z-index: 1;
+    position: relative;
+}
+
+.uk-card-media-top > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+    background-position: 0% 50%;
+}
+
+#BookSlider{
+    width: 70vw;
+    margin-top: 6vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul.uk-slider-items > li{
+    filter: grayscale(100%);
+}
+
+ul.uk-slider-items > li:hover{
+    filter: none;
+}
+
+ul.uk-slider-items > li .PlusSign{
+    visibility: hidden;
+}
+
+ul.uk-slider-items > li:hover .PlusSign{
+    visibility: visible;
+}
+
+img.BookImage{
+    position: relative;
+    width: 25vw;
+    z-index: -2;
+}
+
+img.BookImage:hover{
+    filter: none;
+}
+
+.BookImageContainer{
+    position: relative;
+}
+
+a.uk-position-center-left-out{
+    color: gray;
+}
+
+a.uk-position-center-left-out:hover{
+    color: #75BAA6;
+}
+
+a.uk-position-center-right-out{
+    color: gray;
+}
+
+a.uk-position-center-right-out:hover{
+    color: #75BAA6;
+}
+
+a.uk-position-center-left{
+    color: #406E60 !important;
+}
+
+a.uk-position-center-left:hover{
+    color: #75BAA6 !important;
+}
+
+a.uk-position-center-right{
+    color: #406E60 !important;
+}
+
+a.uk-position-center-right:hover{
+    color: #75BAA6 !important;
+}
+
+li.uk-active > a{
+    background-color: #75BAA6 !important;
+}
+
+li.uk-button{
+    padding: 0;
+}
+
+.uk-button-primary{
+    background-color: #75BAA6;
+    color: white !important;
+}
+
+.uk-button-primary:hover{
+    background-color: #65A190;
+}
+
+.uk-button{
+    color: #75BAA6;
+}
+
+.uk-button:hover{
+    color:  #65A190;
+}
+
+.BookItem{
+    margin-bottom: 6vh;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+
+    text-align: left;
+
+    font-size: 10vh;
+    height: 30vh;
+}
+
+.BookItem > div {
+    margin-top: auto;
+    margin-bottom : auto;
+}
+
+.BookItem > div > p{
+    margin-top: auto; /* margin-bottom auto already set */
+}
+
+.uk-modal-title > span{
+    color: black;
+    font-size: .5em;
+}
+
+img.ModalBookImage{
+    max-height: 25vh;
+    max-width: 25vw;
+}
+
+.PlusSign{
+    color: #75BAA6;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 45px;
+    width: 45px;
+}
+
+.PlusSignTouch{
+    visibility: visible !important;
+}
+
+.PlusSign > div{
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    border-radius: 50%;
+    background-color: white;
+    width: 79%;
+    height: 79%;
+    z-index: -1;
+}
+
+/* End Section 5 Styles */
+
+/* Start Section 6 Styles */
+#Section6{
+    text-align: center;
+
+    z-index: 1;
+    position: relative;
+    background-color: #5e5e5e;
+    text-align: center;
+}
+
+#Section6 > div{
+    display: flex;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+
+#Section6 > div > div > i{
+    margin-top: 6vh;
+    font-size: 100px;
+    color: #75BAA6;
+    transition: transform .15s;
+}
+
+#Section6 > div > div > i:hover{
+    transform: scale(1.2);
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2);
+}
+
+#Section6 > div > div > .fas{
+    font-size: 110px;
+    position: relative;
+    bottom: 4px; /* the envelope has asymmetrical margins */
+}
+
+/* End Section 6 Styles */
+
+#NavSuggestion{
+
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-name: suggest;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    color: #BA6176 !important;
+    z-index: 0;
+}
+
+@keyframes suggest {
+    from {}
+    to {transform: translate(-50%, 20%)}
+}
+
+@media screen and (max-width: 783px) {
+    #Main {
+        background-position: 40%;
+    }
+
+    #NameBox{
+        Margin-top: 10%;
+        font-size: 40px;
+    }
+}
+
+
+@media screen and (max-width: 1280px) {
+
+    #Experience > div.ExperienceItem{
+        width: 70vw;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+
+}
+
+@media screen and (max-width: 576px) {
+
+    h1{
+        font-size: 60px;
+        font-weight: 700;
+        text-shadow:
+            -1px -1px 0 #fff,
+            1px -1px 0 #fff,
+            -1px 1px 0 #fff,
+            1px 1px 0 #fff;  
+    }
+
+    h2 {
+
+        font-size: 48px;
+    }
+
+    h3 {
+        margin-top: 8vh;
+        margin-bottom: 8vh;
+        font-size: 34px;
+    }
+
+    h4 {
+        margin-top: 3vh;
+        font-size: 24px;
+    }
+
+    h5 {
+        margin-top: 2vh;
+        font-size: 20px;
+    }
+
+    h6{
+        margin-top: 0.5vh;
+        font-size: 16px;
+    }
+
+    p{
+        margin-top: 2vh;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    q{
+        font-size: 16px; 
+    }
+
+    .ExperienceImage{
+        display: none;
+    }
+
+    #Experience > div.ExperienceItem{
+        width: 80vw;
+    }
+
+    #Logo{
+        display: none;
+    }
+}
+
+@media screen and (max-height: 500px) {
+
+    #Menu{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    #Menu{
+        display: none;
+    }
+
+    .MenuHidden{
+
+        right: 0% !important;
+    }
+
+    .MenuContentHidden{
+        left: 0% !important;
+    }
+
+    #MenuContent{
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 10%;
+        top: 0;
+        left: 0;
+
+    }
+
+    .menuSection{
+        margin-bottom: 0%;
+        margin-top: 0%;
+        height: 100%;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .menuSection > div > a{
+        font-size: 3.0vh;
+        position: relative;
+        top: 40%;
+        display: block;
+    }
+
+    .menuSection > div{
+        position: relative;
+    }
+
+    .HamburgerIcon {
+        display: none;
+    }
+
+    #MenuContent { 
+        background: rgb(240, 240, 240); 
+    } 
+
+    #Main{
+        background-color: rgba(0,0,0,0.5);
+        background-image: url('images/ObjectiveMountain.JPG');
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+        background-color: rgba(255,255,255,0.1);
+        background-blend-mode: lighten;
+        background-position: 50%;
+        filter: grayscale(100%);
+
+        text-align: center;
+        height: 100vh;
+        width: 100vw;
+        max-width: 100%;
+        z-index: -1;
+    }
+
+    #NameBox{
+        top: 7%;
+    }
+
+    .MoveNameBox{
+        top: 7% !important;
+    }
+
+    .QuoteWrapper {
+        text-align: center;
+        width: 70vw;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+
+@supports (-ms-ime-align:auto) { 
+    #MenuContent { 
+        background: rgb(240, 240, 240); 
+    } 
+}
